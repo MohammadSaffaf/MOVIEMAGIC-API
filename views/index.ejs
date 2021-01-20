@@ -1,11 +1,24 @@
 <%- include('./partials/header') %>
     <article class="article-home">
+        <%#=JSON.stringify(mydata) %>
+            <%mydata.forEach(element=> {%>
+                <section class="section-Item">
 
-        <%mydata.forEach(element=> {%>
-            <section class="section-Item">
+                    <div>
+                        <a href="/moviesdetails/<%= element.id %> "><img
+                                src="https://image.tmdb.org/t/p/w500/<%= element.poster_path %>" alt=""></a>
+                    </div>
 
-            </section>
-            <%});%>
+                    <div>
+                        <a href="">
+                            <%= element.title %>
+                        </a>
+                    </div>
+
+
+
+                </section>
+                <%});%>
     </article>
 
     <%- include('./partials/footer') %>
