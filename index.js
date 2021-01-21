@@ -1,4 +1,5 @@
 require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const fetch = require('node-fetch');
@@ -101,5 +102,14 @@ app.get('/favuriteDetails/:id', (req, res) => {
   filmdetails.findById(req.params.id)
   
   .then(result => res.render('favuriteDetails',{Details: result}))
+  .catch(err => console.log(err))
+})
+
+app.get('/favuriteDetails/:id/delete', (req, res) => {
+  // console.log(req.params.id);
+  filmdetails.findByIdAndDelete(req.params.id)
+  // ShopItem.find()
+  .then(result => res.render('favuriteDetails',{Details: result}))
+  res.send("The file has benn Deleted ")
   .catch(err => console.log(err))
 })

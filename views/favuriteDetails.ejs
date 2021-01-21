@@ -1,7 +1,7 @@
 <%- include('./partials/header') %>
     <img src="https://image.tmdb.org/t/p/w500/<%= Details.backdrop_path %>" alt="">
     <article class="favouriteButton">
-        <img src="/minus.svg" alt="">
+        <a href="/favuriteDetails/<%= Details._id %>/delete""><img src=" /minus.svg" alt=""></a>
         <h2>Remove from favourite
         </h2>
     </article>
