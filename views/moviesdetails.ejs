@@ -1,12 +1,14 @@
 <%- include('./partials/header') %>
-    <img src="https://image.tmdb.org/t/p/w500/<%= mydata2.poster_path %>" alt="">
+    <article class="img-moviesdetails">
+        <img src=" https://image.tmdb.org/t/p/w500/<%=mydata2.backdrop_path %>" alt="">
+    </article>
     <article class="favouriteButton">
         <a href="/myFavuriteList/<%= mydata2.id %>"><img src="/plus.svg" alt=""></a>
         <h2>Add to favourite</h2>
     </article>
     <article class="vote">
         <div class="average">
-            <img src="/star.svg" alt="">
+            <img src="/star1.png" alt="">
             <p>
                 <%= mydata2.vote_average %><span>/10</span>
             </p>
@@ -16,9 +18,9 @@
         </div>
     </article>
     <article class="title">
-        <h3>
+        <h2>
             <%= mydata2.title %>
-        </h3>
+        </h2>
     </article>
     <article class="release">
         <p>
@@ -37,9 +39,9 @@
     </article>
     <article class="summary">
         <h3>Plot Summary</h3>
-        <h5>
+        <p>
             <%= mydata2.overview %>
-        </h5>
+        </p>
     </article>
 
     <%- include('./partials/footer') %>

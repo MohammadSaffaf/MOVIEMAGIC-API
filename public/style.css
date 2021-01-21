@@ -8,7 +8,14 @@
 }
 a {
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
 }
+body {
+  background-color: rgb(51, 51, 51);
+  color: #fff;
+}
+
 /* NAVIGATION */
 .section-nav {
   display: flex;
@@ -38,5 +45,97 @@ a {
 /* homePage */
 .article-home {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
+  margin: 50px 5%;
+}
+.article-home img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.article-home a {
+  font-size: 25px;
+}
+
+/* moviesdetails  */
+.img-moviesdetails {
+  display: flex;
+  justify-content: center;
+}
+.img-moviesdetails img {
+  width: 80%;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.favouriteButton {
+  display: flex;
+  align-items: center;
+  margin-left: 7%;
+  margin-top: 5%;
+  font-family: "Poppins", sans-serif;
+}
+.favouriteButton a {
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 50px;
+  line-height: 10px;
+}
+.vote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 75vh;
+  background-color: #fff;
+  width: 20vh;
+  height: 10vh;
+  text-align: right;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.average {
+  background-color: #fff;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  width: 10%;
+}
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  margin-left: 7%;
+  margin-top: 3%;
+}
+.release {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  margin-left: 7%;
+  font-size: 25px;
+}
+.genres {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  margin-left: 7%;
+  font-size: 25px;
+}
+.genres p {
+  border: 2px solid #cccccc;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.summary {
+  font-family: "Poppins", sans-serif;
+  margin-left: 7%;
+  font-size: 25px;
+  margin-top: 4%;
+  margin-bottom: 10%;
+  width: 70%;
 }
