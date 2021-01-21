@@ -1,0 +1,15 @@
+<%- include('./partials/header') %>
+    <section id="myshow">
+        <% FavItem.forEach(element=> { %>
+            <article class="myshow">
+                <img src="https://image.tmdb.org/t/p/w500<%= element.poster_path %> " alt="">
+                <h5>
+                    <%= element.title %>
+                </h5>
+                <p>
+                    <%= element.overview %>
+                </p>
+                <a href="/favuriteDetails/<%= element._id %>">See More</a>
+            </article>
+            <% }) %>
+                <%- include('./partials/footer') %>

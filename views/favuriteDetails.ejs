@@ -1,35 +1,36 @@
 <%- include('./partials/header') %>
-    <img src="https://image.tmdb.org/t/p/w500/<%= mydata2.poster_path %>" alt="">
+    <img src="https://image.tmdb.org/t/p/w500/<%= Details.backdrop_path %>" alt="">
     <article class="favouriteButton">
-        <a href="/myFavuriteList/<%= mydata2.id %>"><img src="/plus.svg" alt=""></a>
-        <h2>Add to favourite</h2>
+        <img src="/minus.svg" alt="">
+        <h2>Remove from favourite
+        </h2>
     </article>
     <article class="vote">
         <div class="average">
             <img src="/star.svg" alt="">
             <p>
-                <%= mydata2.vote_average %><span>/10</span>
+                <%= Details.vote_average %><span>/10</span>
             </p>
             <p>
-                <%= mydata2.popularity %>
+                <%= Details.popularity %>
             </p>
         </div>
     </article>
     <article class="title">
         <h3>
-            <%= mydata2.title %>
+            <%= Details.title %>
         </h3>
     </article>
     <article class="release">
         <p>
-            <%= mydata2.release_date %>
+            <%= Details.release_date %>
         </p>
         <p>
-            <%= mydata2.status %>
+            <%= Details.status %>
         </p>
     </article>
     <article class="genres">
-        <% mydata2.genres.forEach(element=> { %>
+        <% Details.genres.forEach(element=> { %>
             <p>
                 <%= element.name %>
             </p>
@@ -38,7 +39,7 @@
     <article class="summary">
         <h3>Plot Summary</h3>
         <h5>
-            <%= mydata2.overview %>
+            <%= Details.overview %>
         </h5>
     </article>
 
