@@ -1,5 +1,7 @@
 <%- include('./partials/header') %>
-    <img src="https://image.tmdb.org/t/p/w500/<%= Details.backdrop_path %>" alt="">
+    <article class="img-moviesdetails">
+        <img src="https://image.tmdb.org/t/p/w500/<%= Details.backdrop_path %>" alt="">
+    </article>
     <article class="favouriteButton">
         <a href="/favuriteDetails/<%= Details._id %>/delete""><img src=" /minus.svg" alt=""></a>
         <h2>Remove from favourite
@@ -7,7 +9,7 @@
     </article>
     <article class="vote">
         <div class="average">
-            <img src="/star.svg" alt="">
+            <img src="/star1.png" alt="">
             <p>
                 <%= Details.vote_average %><span>/10</span>
             </p>

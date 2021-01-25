@@ -17,6 +17,7 @@ app.set('view engine','ejs')
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+
 //Home page____________
 app.get('/' , (req, res) =>{
     
@@ -24,7 +25,7 @@ app.get('/' , (req, res) =>{
   .then(res => res.json())
   .then(json => {
       // console.log( "test",json)
-      res.render("index", { mydata: json.results  })
+      res.render("index", { mydata: json.results })
   })
 .catch(err=>console.log(err))
 })
@@ -113,3 +114,4 @@ app.get('/favuriteDetails/:id/delete', (req, res) => {
   res.send("The file has benn Deleted ")
   .catch(err => console.log(err))
 })
+

@@ -139,3 +139,8 @@ body {
   margin-bottom: 10%;
   width: 70%;
 }
+.article-home h5,
+p {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1%;
+}
