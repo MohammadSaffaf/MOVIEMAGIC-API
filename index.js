@@ -115,3 +115,16 @@ app.get('/favuriteDetails/:id/delete', (req, res) => {
   .catch(err => console.log(err))
 })
 
+app.get('/page/:id' , (req, res) =>{
+    
+  fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.myKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${req.params.id}`)
+  .then(res => res.json())
+  .then(json => {
+      // console.log( "test",json)
+      if (req.params.id > 1000) {
+        req.params.id = 1000
+    }
+      res.render("index", { mydata: json.results })
+  })
+.catch(err=>console.log(err))
+})
